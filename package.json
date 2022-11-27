@@ -15,6 +15,14 @@
     "format": "prettier --write \"./**/*.{ts,tsx,json}\"",
     "prepare": "husky install"
   },
+  "lint-staged": {
+    "*.{js,ts,tsx, jsx}": [
+      "eslint --quiet --fix"
+    ],
+    "*.{json,md,html,js,jsx,ts,tsx}": [
+      "prettier --write"
+    ]
+  },
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -45,8 +53,5 @@
     "vite": "^3.2.4",
     "vite-tsconfig-paths": "^3.6.0",
     "vitest": "^0.25.3"
-  },
-  "lint-staged": {
-    "*.{ts,tsx,js,jsx}": "pnpm lint:fix && pnpm format"
   }
 }
