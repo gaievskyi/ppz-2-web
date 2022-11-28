@@ -5,23 +5,33 @@ import {
   createRouteConfig
 } from '@tanstack/react-router'
 import { TanStackRouterDevtools as RouterDevtools } from '@tanstack/react-router-devtools'
-import { Header } from 'modules'
-import { WelcomePage, StorePage } from 'pages'
+import { Footer, Header } from 'modules'
+import { StorePage, CategoriesPage } from 'pages'
 
 const rootRoute = createRouteConfig()
 
 const indexRoute = rootRoute.createRoute({
-  component: WelcomePage,
+  component: StorePage,
   path: '/'
 })
 
-const aboutRoute = rootRoute.createRoute({
-  component: StorePage,
-  path: '/store'
+const categoriesRoute = rootRoute.createRoute({
+  component: CategoriesPage,
+  path: '/categories'
 })
 
-const routeConfig = rootRoute.addChildren([indexRoute, aboutRoute])
+const aboutRoute = rootRoute.createRoute({
+  component: CategoriesPage,
+  path: '/about'
+})
 
+const contactRoute = rootRoute.createRoute({
+  component: CategoriesPage,
+  path: '/contact'
+})
+
+export const routes = [indexRoute, categoriesRoute, aboutRoute, contactRoute]
+const routeConfig = rootRoute.addChildren(routes)
 const router = createReactRouter({ routeConfig })
 
 export const Router: React.FC = () => (
@@ -29,5 +39,6 @@ export const Router: React.FC = () => (
     <Header />
     <Outlet />
     <RouterDevtools />
+    <Footer />
   </RouterProvider>
 )

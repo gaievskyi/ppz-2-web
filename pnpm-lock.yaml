@@ -29,8 +29,10 @@ specifiers:
   prettier: 2.8.0
   react: ^18.2.0
   react-dom: ^18.2.0
+  react-icons: ^4.6.0
   react-router@beta: link:@types/@tanstack/react-router@beta
   react-test-renderer: ^18.2.0
+  react-use-cart: ^1.13.0
   sanitize.css: ^13.0.0
   typescript: ^4.9.3
   vite: ^3.2.4
@@ -46,7 +48,9 @@ dependencies:
   better-react-carousel: 1.1.1_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-icons: 4.6.0_react@18.2.0
   react-router@beta: link:@types/@tanstack/react-router@beta
+  react-use-cart: 1.13.0_react@18.2.0
   sanitize.css: 13.0.0
 
 devDependencies:
@@ -3017,6 +3021,14 @@ packages:
       scheduler: 0.23.0
     dev: false
 
+  /react-icons/4.6.0_react@18.2.0:
+    resolution: {integrity: sha512-rR/L9m9340yO8yv1QT1QurxWQvWpbNHqVX0fzMln2HEb9TEIrQRGsqiNFQfiv9/JEUbyHmHPlNTB2LWm2Ttz0g==}
+    peerDependencies:
+      react: '*'
+    dependencies:
+      react: 18.2.0
+    dev: false
+
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
 
@@ -3049,6 +3061,15 @@ packages:
       react-shallow-renderer: 16.15.0_react@18.2.0
       scheduler: 0.23.0
     dev: true
+
+  /react-use-cart/1.13.0_react@18.2.0:
+    resolution: {integrity: sha512-V3jrNOgBXxTn/RWh1HCEdrQk/jx2xCixdkX1c7Vyl4zxEf9jOuniUnjZSTALO7rQ5226onqmvXxKz1eu0Yz6Iw==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16'
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /react/18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}

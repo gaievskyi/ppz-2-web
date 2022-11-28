@@ -1,6 +1,6 @@
-import { Gallery } from 'modules'
+import { Categories } from 'modules'
 
-export const StorePage: React.FC = () => (
+export const CategoriesPage: React.FC = () => (
   <div
     style={{
       display: 'flex',
@@ -8,6 +8,6 @@ export const StorePage: React.FC = () => (
       gap: '80px'
     }}
   >
-    <Gallery />
+    <Categories />
   </div>
 )

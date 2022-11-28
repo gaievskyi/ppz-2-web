@@ -1,2 +1,2 @@
-export * from './welcome'
 export * from './store'
+export * from './categories'

@@ -1,4 +1,5 @@
 import { Link } from '@tanstack/react-router'
+import { routes } from 'modules/router'
 
 export const Routes: React.FC = () => (
   <div
@@ -8,41 +9,17 @@ export const Routes: React.FC = () => (
       gap: '3em'
     }}
   >
-    <Link
-      to="/"
-      style={{
-        color: 'black',
-        textDecoration: 'none'
-      }}
-    >
-      Home
-    </Link>
-    <Link
-      to="/store"
-      style={{
-        color: '#cacaca',
-        textDecoration: 'none'
-      }}
-    >
-      Store
-    </Link>
-    <Link
-      to="/about"
-      style={{
-        color: '#cacaca',
-        textDecoration: 'none'
-      }}
-    >
-      About
-    </Link>
-    <Link
-      to="/contact"
-      style={{
-        color: '#cacaca',
-        textDecoration: 'none'
-      }}
-    >
-      Contact
-    </Link>
+    {routes.map((route) => (
+      <Link
+        to={route.path}
+        key={route.path}
+        style={{
+          color: 'black',
+          textDecoration: 'none'
+        }}
+      >
+        {route.path === '/' ? 'Store' : route.path.replaceAll('/', '')}
+      </Link>
+    ))}
   </div>
 )

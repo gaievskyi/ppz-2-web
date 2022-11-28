@@ -7,11 +7,12 @@ export const Button: React.FC<ButtonProps> = ({ children, onClick }) => (
     onClick={onClick}
     style={{
       background: 'none',
-      border: '2px solid black',
+      border: '1px solid black',
       borderRadius: '10px',
       cursor: 'pointer',
+      maxWidth: '300px',
       padding: 10,
-      width: '100px'
+      transition: '0.3s ease-out all'
     }}
   >
     {children}

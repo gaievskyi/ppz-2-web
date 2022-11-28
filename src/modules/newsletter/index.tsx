@@ -54,6 +54,7 @@ export const Newsletter: React.FC = () => {
             borderBottomRightRadius: '1em',
             borderTopLeftRadius: 0,
             borderTopRightRadius: '1em',
+            color: 'black',
             marginLeft: '-1px',
             padding: '1em'
           }}

@@ -1,1 +1,1 @@
-export * from './offer-card'
+export * from './category-card'
