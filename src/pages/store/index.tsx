@@ -1,6 +1,6 @@
-import { Gallery, Newsletter, Offers } from 'modules'
+import { Header, Newsletter, Offers } from 'modules'
 
-export const WelcomePage: React.FC = () => (
+export const StorePage: React.FC = () => (
   <div
     style={{
       display: 'flex',
@@ -9,7 +9,6 @@ export const WelcomePage: React.FC = () => (
     }}
   >
     <Offers />
-    <Gallery />
     <Newsletter />
   </div>
 )
