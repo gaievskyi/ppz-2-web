@@ -77,6 +77,7 @@ export const Gallery: React.FC<{ dev: boolean }> = ({ dev }) => {
               <div
                 style={{
                   alignItems: 'center',
+                  background: 'white',
                   border: '10px solid white',
                   borderRadius: '2em',
                   display: 'flex',
@@ -87,8 +88,12 @@ export const Gallery: React.FC<{ dev: boolean }> = ({ dev }) => {
                 }}
               >
                 <img
+                  style={{
+                    borderRadius: '1rem',
+                    objectFit: 'cover'
+                  }}
                   width={325}
-                  height={325}
+                  height={300}
                   src={product.productPicture.source}
                   alt="asd"
                 />
@@ -134,12 +139,16 @@ export const Gallery: React.FC<{ dev: boolean }> = ({ dev }) => {
                   <p>{product.price}€</p>
                 </div>
                 <Button
+                  variant="contained"
                   onClick={() => {
                     addItem(product)
                     notify()
                   }}
                   style={{
-                    marginTop: '1em'
+                    background: 'black',
+                    borderRadius: '1rem',
+                    marginTop: '1em',
+                    padding: '0.8rem 1rem'
                   }}
                 >
                   Add to cart
