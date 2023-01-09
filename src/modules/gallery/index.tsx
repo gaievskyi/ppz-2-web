@@ -99,6 +99,7 @@ export const Gallery: React.FC<{ dev: boolean }> = ({ dev }) => {
                 />
                 {dev && (
                   <Stack
+                    direction="row"
                     gap={2}
                     sx={{
                       marginTop: '1em'
@@ -110,7 +111,8 @@ export const Gallery: React.FC<{ dev: boolean }> = ({ dev }) => {
                         '&:hover': {
                           background: '#3c3c3c'
                         },
-                        background: 'black'
+                        background: 'black',
+                        borderRadius: '1em'
                       }}
                     >
                       Remove
@@ -121,7 +123,8 @@ export const Gallery: React.FC<{ dev: boolean }> = ({ dev }) => {
                         '&:hover': {
                           background: '#3c3c3c'
                         },
-                        background: 'black'
+                        background: 'black',
+                        borderRadius: '1em'
                       }}
                     >
                       Edit

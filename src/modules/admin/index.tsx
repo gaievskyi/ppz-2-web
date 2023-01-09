@@ -1,4 +1,4 @@
-import { Box, Tab, Tabs, Typography } from '@mui/material'
+import { Box, Tab, Tabs, Typography, Stack } from '@mui/material'
 import { useMutation } from '@tanstack/react-query'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
@@ -77,12 +77,8 @@ export const Admin: React.FC = () => {
         gap: '80px'
       }}
     >
-      <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-        <Tabs
-          value={value}
-          onChange={handleChange}
-          aria-label="basic tabs example"
-        >
+      <Box sx={{ borderBottom: 1, borderColor: 'divider', padding: '0 25%' }}>
+        <Tabs value={value} onChange={handleChange} aria-label="Tabs">
           <Tab label="Add product" {...a11yProps(0)} />
           <Tab label="Edit products" {...a11yProps(1)} />
         </Tabs>
@@ -153,11 +149,15 @@ export const Admin: React.FC = () => {
         </form>
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <h1>Edit products</h1>
-
+        <Stack
+          sx={{
+            padding: '0 3em'
+          }}
+        >
+          <h1>Edit products</h1>
+        </Stack>
         <Gallery dev />
       </TabPanel>
-
       <ToastContainer />
     </div>
   )
