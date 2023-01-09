@@ -1,13 +1,17 @@
+import { Link as MuiLink } from '@mui/material'
+import { Link } from 'react-router-dom'
 import { Button } from 'components'
 
 type CartFooterProps = {
   cartTotal: number
   totalItems: number
+  close: () => void
 }
 
 export const CartFooter: React.FC<CartFooterProps> = ({
   cartTotal,
-  totalItems
+  totalItems,
+  close
 }) => {
   return (
     <div
@@ -30,8 +34,17 @@ export const CartFooter: React.FC<CartFooterProps> = ({
       >
         <p>Total</p>
         <p>{totalItems} items in cart</p>
-        <p>${cartTotal}</p>
-        <Button>Checkout</Button>
+        <p>€{cartTotal}</p>
+        <Link to="/order">
+          <MuiLink
+            onClick={close}
+            sx={{
+              color: 'black'
+            }}
+          >
+            Checkout
+          </MuiLink>
+        </Link>
       </div>
     </div>
   )

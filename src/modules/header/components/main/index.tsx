@@ -1,8 +1,9 @@
+import { Typography, Stack } from '@mui/material'
 import { useState } from 'react'
 import { BsCart } from 'react-icons/bs'
 import { Button } from 'components'
 import { Cart } from 'modules'
-import { Logo, Routes } from './components'
+import { Routes } from './components'
 
 export const Main: React.FC = () => {
   const [isCartOpened, setIsCartOpened] = useState(false)
@@ -25,7 +26,15 @@ export const Main: React.FC = () => {
         textTransform: 'uppercase'
       }}
     >
-      <Logo />
+      <Stack
+        sx={{
+          lineHeight: 0,
+          p: '1em'
+        }}
+      >
+        <Typography variant="h6">Jak pies z kotem</Typography>
+        <Typography variant="caption">z miłością do zwierząt</Typography>
+      </Stack>
       <Routes />
       <div
         style={{

@@ -46,13 +46,18 @@ export const Cart: React.FC<CartProps> = ({ opened, close }) => {
             <CartProduct
               key={item.id}
               id={item.id}
-              title={item.title}
+              title={item.name}
               price={item.price}
+              image={item?.productPicture?.source}
               quantity={item.quantity}
             />
           ))}
 
-          <CartFooter cartTotal={cartTotal} totalItems={totalItems} />
+          <CartFooter
+            cartTotal={cartTotal}
+            totalItems={totalItems}
+            close={close}
+          />
         </div>
       )}
     </>

@@ -1,3 +1,4 @@
+import { Paper } from '@mui/material'
 import { useCart } from 'react-use-cart'
 import { Button } from 'components'
 
@@ -6,13 +7,15 @@ type CartProductProps = {
   title: string
   price: number
   quantity?: number
+  image?: string
 }
 
 export const CartProduct: React.FC<CartProductProps> = ({
   id,
   title,
   price,
-  quantity
+  quantity,
+  image
 }) => {
   const { updateItemQuantity, removeItem } = useCart()
 
@@ -43,9 +46,20 @@ export const CartProduct: React.FC<CartProductProps> = ({
       }}
     >
       <div style={{ alignItems: 'center', display: 'flex' }}>
-        <div style={{ marginLeft: 5 }}>
+        <Paper variant="outlined">
+          <img
+            src={image}
+            alt=""
+            style={{
+              height: '100px',
+              width: '100px'
+            }}
+          />
+        </Paper>
+
+        <div style={{ marginLeft: 5, maxWidth: '200px' }}>
           <h1>{title}</h1>
-          <h2>${price}</h2>
+          <h2>€{price}</h2>
         </div>
       </div>
       <div style={{ display: 'flex', gap: '1em' }}>
